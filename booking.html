@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book a Table | Desert Rose Restaurant</title>
+<meta name="description" content="Reserve your table at Desert Rose Restaurant, Souq Waqif, Doha.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="logo">Desert Rose<span>SOUQ WAQIF &middot; DOHA</span></a>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="about.html">About</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="shop.html">Shop</a>
+      <a href="contact.html">Contact</a>
+      <a href="booking.html" class="btn btn--primary btn--sm">Book a Table</a>
+    </nav>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">&#9776;</button>
+  </div>
+</header>
+
+<section class="page-hero" style="--hero-img: url('https://images.unsplash.com/photo-1600891964599-f61ba0e24092?q=80&w=1600&auto=format&fit=crop')">
+  <div class="container">
+    <span class="breadcrumb">Home / Book a Table</span>
+    <h1>Book a Table</h1>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container split">
+    <div>
+      <span class="section-label">Reserve Your Spot</span>
+      <h2>Join Us on the Terrace</h2>
+      <p>Fill in the form and our team will confirm your booking by phone or WhatsApp. For same-day or large group bookings, message us directly on WhatsApp for the fastest response.</p>
+
+      <div class="info-block" style="margin-top: 28px;">
+        <h3>Opening Hours</h3>
+        <p>Daily, 12:00 PM &ndash; 1:00 AM</p>
+      </div>
+      <div class="info-block" style="margin-top: 24px;">
+        <h3>Location</h3>
+        <p>Al Jomrok Hotel, Souq Waqif, Doha</p>
+      </div>
+      <a href="https://wa.me/97455259646" class="btn btn--whatsapp" style="margin-top: 24px;">WhatsApp a Booking Request</a>
+    </div>
+
+    <form class="form-card">
+      <h3 style="margin-bottom: 20px;">Reservation Details</h3>
+      <div class="form-grid">
+        <div>
+          <label for="b-name">Full Name</label>
+          <input type="text" id="b-name" placeholder="Your name" required>
+        </div>
+        <div>
+          <label for="b-phone">Phone</label>
+          <input type="tel" id="b-phone" placeholder="+974 ..." required>
+        </div>
+        <div>
+          <label for="b-date">Date</label>
+          <input type="date" id="b-date" required>
+        </div>
+        <div>
+          <label for="b-time">Time</label>
+          <input type="time" id="b-time" required>
+        </div>
+        <div>
+          <label for="b-guests">Guests</label>
+          <select id="b-guests">
+            <option>1 Guest</option>
+            <option>2 Guests</option>
+            <option selected>3-4 Guests</option>
+            <option>5-8 Guests</option>
+            <option>9+ Guests</option>
+          </select>
+        </div>
+        <div>
+          <label for="b-seating">Seating</label>
+          <select id="b-seating">
+            <option>Terrace</option>
+            <option>Indoor</option>
+            <option>Shisha Lounge</option>
+          </select>
+        </div>
+        <div class="full">
+          <label for="b-notes">Special Requests</label>
+          <textarea id="b-notes" placeholder="Allergies, occasion, seating preference..."></textarea>
+        </div>
+        <div class="full">
+          <button type="submit" class="btn btn--primary btn--full">Confirm Reservation</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">Desert Rose</div>
+        <p>Arabic, Ukrainian &amp; European cuisine on a rooftop terrace in Souq Waqif, Doha &mdash; rated 4.7★ by 2,900+ guests.</p>
+        <div class="social-row">
+          <a href="#" aria-label="Instagram">IG</a>
+          <a href="#" aria-label="Facebook">FB</a>
+          <a href="https://wa.me/97455259646" aria-label="WhatsApp">WA</a>
+        </div>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="booking.html">Book a Table</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="shop.html">All Products</a></li>
+          <li><a href="cart.html">Cart</a></li>
+          <li><a href="checkout.html">Checkout</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p>Al Jomrok Hotel, Souq Waqif, Doha, Qatar</p>
+        <p>+974 5525 9646</p>
+        <p>info@desertrose.qa</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; Desert Rose Restaurant. All rights reserved.</span>
+      <span>Developed by <a href="https://sumsworksolution.com">Sumswork Solution</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
