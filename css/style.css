@@ -217,6 +217,46 @@ input:focus, select:focus, textarea:focus { outline: 2px solid var(--color-prima
 .map-embed { border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); }
 .map-embed iframe { width: 100%; height: 100%; min-height: 340px; border: 0; }
 
+/* WhatsApp floating button */
+.whatsapp-float { position: fixed; bottom: 22px; right: 22px; width: 56px; height: 56px; background: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 22px rgba(0,0,0,0.28); z-index: 999; transition: transform 0.2s ease; }
+.whatsapp-float:hover { transform: scale(1.08); }
+.whatsapp-float svg { width: 28px; height: 28px; }
+
+/* Testimonial carousel */
+.testi-carousel { max-width: 640px; margin: 0 auto; text-align: center; }
+.testi-carousel .testi-card { display: none; padding: 34px 32px; }
+.testi-carousel .testi-card.active { display: block; }
+.testi-nav { display: flex; align-items: center; justify-content: center; gap: 22px; margin-top: 28px; }
+.testi-nav button { width: 40px; height: 40px; border-radius: 50%; border: 1px solid rgba(28,22,17,0.2); background: var(--color-white); font-size: 1.1rem; cursor: pointer; color: var(--color-primary); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.testi-dots { display: flex; gap: 8px; }
+.testi-dots button { width: 9px; height: 9px; padding: 0; border-radius: 50%; border: none; background: rgba(28,22,17,0.2); cursor: pointer; }
+.testi-dots button.active { background: var(--color-primary); width: 22px; border-radius: 5px; }
+
+/* Cart rows — responsive, replaces the old table */
+.cart-row-head { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 0.6fr; gap: 16px; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--color-text-muted); padding-bottom: 16px; border-bottom: 1px solid rgba(28,22,17,0.12); }
+.cart-row { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 0.6fr; gap: 16px; align-items: center; padding: 20px 0; border-bottom: 1px solid rgba(28,22,17,0.08); }
+.cart-field { font-size: 0.95rem; }
+.cart-remove { text-align: right; }
+
+@media (max-width: 640px) {
+  .cart-row-head { display: none; }
+  .cart-row { grid-template-columns: 1fr; gap: 2px; padding: 20px 0; }
+  .cart-row .cart-item { margin-bottom: 10px; }
+  .cart-field { display: flex; justify-content: space-between; align-items: center; padding: 8px 0; border-bottom: 1px dashed rgba(28,22,17,0.08); }
+  .cart-field::before { content: attr(data-label); font-weight: 600; font-size: 0.78rem; color: var(--color-text-muted); text-transform: uppercase; letter-spacing: 0.03em; }
+  .cart-remove { justify-content: flex-end; border-bottom: none; }
+  .cart-remove::before { content: ""; }
+}
+
+/* Checkout — mobile-first single column */
+.checkout-wrap { max-width: 620px; margin: 0 auto; }
+.checkout-block { margin-bottom: 30px; }
+.checkout-block h3 { font-size: 1.05rem; margin-bottom: 16px; }
+.checkout-stack { display: flex; flex-direction: column; gap: 16px; }
+.payment-option { display: flex; align-items: center; gap: 12px; padding: 16px 18px; border: 1.5px solid var(--color-primary); border-radius: var(--radius); background: var(--color-bg-alt); font-weight: 600; }
+.payment-option input { width: auto; accent-color: var(--color-primary); }
+.checkout-summary { background: var(--color-bg-alt); padding: 22px; border-radius: var(--radius); margin-bottom: 30px; }
+
 /* Responsive */
 @media (max-width: 980px) {
   .dish-grid, .badge-row, .testi-grid { grid-template-columns: repeat(2, 1fr); }
