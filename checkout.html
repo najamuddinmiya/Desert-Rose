@@ -28,27 +28,34 @@
 </header>
 
 <section class="section">
-  <div class="container">
-    <h1 style="margin-bottom: 40px;">Checkout</h1>
+  <div class="container checkout-wrap">
+    <h1 style="margin-bottom: 32px;">Checkout</h1>
 
-    <div class="product-view">
-      <form class="form-card">
-        <h3 style="margin-bottom: 20px;">Delivery Details</h3>
-        <div class="form-grid">
+    <form id="checkout-form" novalidate>
+
+      <div class="checkout-block">
+        <h3>Contact</h3>
+        <div class="checkout-stack">
           <div>
-            <label for="ck-name">Full Name</label>
-            <input type="text" id="ck-name" placeholder="Your name" required>
+            <label for="ck-email">Email</label>
+            <input type="email" id="ck-email" placeholder="you@example.com" required>
           </div>
           <div>
             <label for="ck-phone">Phone</label>
             <input type="tel" id="ck-phone" placeholder="+974 ..." required>
           </div>
-          <div class="full">
-            <label for="ck-email">Email</label>
-            <input type="email" id="ck-email" placeholder="you@example.com" required>
+        </div>
+      </div>
+
+      <div class="checkout-block">
+        <h3>Delivery Details</h3>
+        <div class="checkout-stack">
+          <div>
+            <label for="ck-name">Full Name</label>
+            <input type="text" id="ck-name" placeholder="Your name" required>
           </div>
-          <div class="full">
-            <label for="ck-address">Delivery Address</label>
+          <div>
+            <label for="ck-address">Address</label>
             <input type="text" id="ck-address" placeholder="Street, building, area" required>
           </div>
           <div>
@@ -57,33 +64,36 @@
           </div>
           <div>
             <label for="ck-zone">Zone / Area</label>
-            <input type="text" id="ck-zone" placeholder="e.g. Al Sadd">
+            <input type="text" id="ck-zone" placeholder="e.g. Al Sadd" required>
           </div>
-          <div class="full">
+          <div>
             <label for="ck-notes">Order Notes (optional)</label>
             <textarea id="ck-notes" placeholder="Delivery instructions..."></textarea>
           </div>
-          <div class="full">
-            <label>Payment Method</label>
-            <select id="ck-payment">
-              <option>Cash on Delivery</option>
-              <option>Credit / Debit Card</option>
-              <option>Pay via WhatsApp</option>
-            </select>
-          </div>
         </div>
-      </form>
-
-      <div class="cart-summary">
-        <h3 style="margin-bottom: 20px;">Order Summary</h3>
-        <div class="summary-row"><span>Desert Rose Mixed Grill &times; 1</span><span>QAR 78.00</span></div>
-        <div class="summary-row"><span>Classic Borscht &times; 2</span><span>QAR 72.00</span></div>
-        <div class="summary-row"><span>Warm Date Cake &times; 1</span><span>QAR 26.00</span></div>
-        <div class="summary-row"><span>Delivery</span><span>QAR 10.00</span></div>
-        <div class="summary-row total"><span>Total</span><span>QAR 186.00</span></div>
-        <a href="thank-you.html" class="btn btn--primary btn--full" style="margin-top: 20px;">Place Order</a>
       </div>
-    </div>
+
+      <div class="checkout-block">
+        <h3>Payment Method</h3>
+        <label class="payment-option">
+          <input type="radio" name="payment" checked required>
+          Cash on Delivery
+        </label>
+      </div>
+
+      <div class="checkout-block">
+        <h3>Order Summary</h3>
+        <div class="checkout-summary">
+          <div class="summary-row"><span>Desert Rose Mixed Grill &times; 1</span><span>QAR 78.00</span></div>
+          <div class="summary-row"><span>Classic Borscht &times; 2</span><span>QAR 72.00</span></div>
+          <div class="summary-row"><span>Warm Date Cake &times; 1</span><span>QAR 26.00</span></div>
+          <div class="summary-row"><span>Delivery</span><span>QAR 10.00</span></div>
+          <div class="summary-row total"><span>Total</span><span>QAR 186.00</span></div>
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn--primary btn--full">Place Order</button>
+    </form>
   </div>
 </section>
 
@@ -131,6 +141,10 @@
     </div>
   </div>
 </footer>
+
+<a href="https://wa.me/97455259646" class="whatsapp-float" aria-label="Chat on WhatsApp" target="_blank" rel="noopener">
+  <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" fill="white"><path d="M16.001 3C9.373 3 4 8.373 4 15.001c0 2.386.629 4.622 1.729 6.564L4 29l7.634-1.687A11.94 11.94 0 0 0 16 27c6.628 0 12-5.373 12-12.001C28 8.373 22.629 3 16.001 3zm6.977 17.1c-.294.826-1.454 1.512-2.383 1.71-.634.135-1.462.243-4.25-.913-3.567-1.477-5.86-5.09-6.04-5.328-.176-.238-1.44-1.916-1.44-3.654 0-1.737.91-2.591 1.233-2.947.294-.323.643-.404.858-.404.214 0 .429.002.617.011.198.01.463-.075.724.552.294.708.996 2.444 1.083 2.62.088.176.147.383.03.62-.117.238-.176.383-.352.588-.176.205-.37.457-.53.614-.176.176-.36.366-.155.72.206.353.914 1.51 1.963 2.446 1.35 1.205 2.487 1.578 2.842 1.754.353.176.559.147.764-.088.206-.235.882-1.03 1.117-1.384.235-.353.47-.294.794-.176.323.117 2.06.972 2.413 1.148.353.177.588.264.676.412.088.147.088.85-.206 1.677z"/></svg>
+</a>
 
 <script src="js/main.js"></script>
 </body>
