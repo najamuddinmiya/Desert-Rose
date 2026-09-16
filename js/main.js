@@ -70,6 +70,33 @@ document.addEventListener("DOMContentLoaded", () => {
     carousel.querySelector(".testi-next")?.addEventListener("click", () => show(index + 1));
   }
 
+  // Gallery carousel (home page)
+  const galleryCarousel = document.querySelector(".gallery-carousel");
+  if (galleryCarousel) {
+    const slides = galleryCarousel.querySelectorAll(".gallery-slide");
+    const gDotsWrap = galleryCarousel.querySelector(".gallery-dots");
+    let gIndex = 0;
+
+    slides.forEach((slide, i) => {
+      const dot = document.createElement("button");
+      dot.setAttribute("aria-label", "Show photo " + (i + 1));
+      if (i === 0) dot.classList.add("active");
+      dot.addEventListener("click", () => showSlide(i));
+      gDotsWrap.appendChild(dot);
+    });
+
+    function showSlide(i) {
+      slides[gIndex].classList.remove("active");
+      gDotsWrap.children[gIndex].classList.remove("active");
+      gIndex = (i + slides.length) % slides.length;
+      slides[gIndex].classList.add("active");
+      gDotsWrap.children[gIndex].classList.add("active");
+    }
+
+    galleryCarousel.querySelector(".gallery-prev")?.addEventListener("click", () => showSlide(gIndex - 1));
+    galleryCarousel.querySelector(".gallery-next")?.addEventListener("click", () => showSlide(gIndex + 1));
+  }
+
   // Checkout: block Place Order until the form is actually filled in
   const checkoutForm = document.getElementById("checkout-form");
   if (checkoutForm) {
