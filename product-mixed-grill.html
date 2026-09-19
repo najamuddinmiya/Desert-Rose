@@ -29,19 +29,37 @@
 
 <section class="section">
   <div class="container">
-    <p style="font-size: 0.85rem; margin-bottom: 24px;"><a href="shop.html" style="color: var(--color-primary); font-weight: 600;">&larr; Back to Shop</a></p>
+    <p class="product-breadcrumb"><a href="shop.html">Shop</a> / Desert Rose Mixed Grill</p>
 
     <div class="product-view">
-      <div>
-        <img src="https://images.unsplash.com/photo-1771285119318-b342c3ecc51c?q=80&w=1000&auto=format&fit=crop" alt="Desert Rose Mixed Grill" style="margin-bottom: 16px;">
-        <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=1000&auto=format&fit=crop" alt="Desert Rose Mixed Grill second view">
+      <div class="product-media">
+        <img class="product-hero-img" src="https://images.unsplash.com/photo-1771285119318-b342c3ecc51c?q=80&w=1000&auto=format&fit=crop" alt="Desert Rose Mixed Grill">
+        <div class="product-thumb-row">
+          <img src="https://images.unsplash.com/photo-1771285119318-b342c3ecc51c?q=80&w=200&auto=format&fit=crop" alt="Desert Rose Mixed Grill thumbnail 1" class="active">
+          <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=200&auto=format&fit=crop" alt="Desert Rose Mixed Grill thumbnail 2">
+        </div>
       </div>
       <div>
-        <span class="dish-tag">Arabic Mezze</span>
-        <h1 style="margin-top: 8px;">Desert Rose Mixed Grill</h1>
-        <span class="stars" style="color: var(--color-accent);">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-        <p class="product-price">QAR 78.00</p>
+        <span class="product-badge">Best Seller</span>
+        <h1>Desert Rose Mixed Grill</h1>
+        <div class="product-rating-row">
+          <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          <span>(214)</span>
+        </div>
+        <div class="product-price-row">
+          <span class="current">QAR 78.00</span>
+          <span class="old">QAR 95.00</span>
+          <span class="save">Save 18%</span>
+        </div>
         <p>A generous platter of char-grilled lamb chops, chicken shish tawook and kofta, served with saffron rice, grilled vegetables and garlic sauce. Prepared fresh over open flame in the traditional style.</p>
+
+        <ul class="feature-list">
+          <li>100% halal, char-grilled over open flame</li>
+          <li>Generous sharing platter, serves 1-2</li>
+          <li>Served with saffron rice &amp; garlic sauce</li>
+        </ul>
+
+        <span class="stock-badge">&#10003; In Stock</span>
 
         <div class="qty-add-row">
           <div class="qty-box">
@@ -49,12 +67,17 @@
             <input type="text" value="1" readonly>
             <button type="button" class="qty-plus">+</button>
           </div>
-          <a href="cart.html" class="btn btn--primary">Add to Cart</a>
         </div>
 
-        <div class="info-block" style="margin-top: 32px;">
-          <h3>Pickup or Delivery</h3>
-          <p>Available for dine-in, pickup and delivery across Doha.</p>
+        <div class="buy-btn-row">
+          <a href="cart.html" class="btn btn--outline btn--full">&#128722; Add to Cart</a>
+          <a href="checkout.html" class="btn btn--buy btn--full">&#9889; Buy Now</a>
+        </div>
+
+        <div class="product-info-list">
+          <p>Free delivery on orders over QAR 150</p>
+          <p>Freshly prepared upon order &mdash; ready in 20&ndash;30 minutes</p>
+          <p>Please let us know about any allergies when ordering</p>
         </div>
       </div>
     </div>
