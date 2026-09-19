@@ -109,4 +109,15 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
+
+  // Product page: thumbnail click swaps the main hero image
+  document.querySelectorAll(".product-thumb-row img").forEach((thumb) => {
+    thumb.addEventListener("click", () => {
+      const media = thumb.closest(".product-media");
+      const main = media?.querySelector(".product-hero-img");
+      if (main) main.src = thumb.src;
+      media?.querySelectorAll(".product-thumb-row img").forEach((i) => i.classList.remove("active"));
+      thumb.classList.add("active");
+    });
+  });
 });
